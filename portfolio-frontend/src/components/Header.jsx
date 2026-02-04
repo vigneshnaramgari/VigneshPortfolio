@@ -44,7 +44,7 @@ export default function Header() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/135NRBMtG0bckqhaE92dp29eHKcvI_rd1/view"
+            href="https://drive.google.com/file/d/1DqXJhwrUihaPQREIlt97H3GvpKHQP9C6/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-2 rounded-full border border-white/30 text-white"
