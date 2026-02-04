@@ -8,8 +8,8 @@ const app = express();
 /* ---------------- CORS ---------------- */
 app.use(cors({
   origin: [
-    "http://localhost:5173",               // local frontend
-    "https://your-vercel-app.vercel.app"   // 🔁 replace with your Vercel URL
+    "http://localhost:5173",                 // Local frontend
+    "https://your-vercel-app.vercel.app"     // 🔁 REPLACE with your real Vercel URL
   ],
   methods: ["GET", "POST"],
 }));
@@ -17,18 +17,15 @@ app.use(cors({
 app.use(express.json());
 
 /* ---------------- MONGODB CONNECTION ---------------- */
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("MongoDB Connected ✅"))
-.catch(err => console.log("Mongo Error:", err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch(err => console.log("Mongo Error:", err));
 
 /* ---------------- SCHEMA ---------------- */
 const ContactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  message: String,
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true },
   date: { type: Date, default: Date.now }
 });
 
@@ -36,7 +33,7 @@ const Contact = mongoose.model("Contact", ContactSchema);
 
 /* ---------------- ROUTES ---------------- */
 
-// Health check route (prevents "Cannot GET /")
+// Health check route
 app.get("/", (req, res) => {
   res.send("API is running 🚀");
 });
@@ -44,10 +41,18 @@ app.get("/", (req, res) => {
 // Contact form route
 app.post("/api/contact", async (req, res) => {
   try {
-    const newMessage = new Contact(req.body);
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ success: false, message: "All fields required" });
+    }
+
+    const newMessage = new Contact({ name, email, message });
     await newMessage.save();
+
     res.json({ success: true, message: "Message Saved" });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ success: false, message: "Server Error" });
   }
 });
