@@ -17,10 +17,22 @@ app.use(cors({
 app.use(express.json());
 
 /* ---------------- MONGODB CONNECTION ---------------- */
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected ✅"))
-  .catch(err => console.log("Mongo Error:", err));
+const mongoOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 10000,
+};
 
+mongoose.connect(process.env.MONGO_URI, mongoOptions)
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch(err => {
+    console.error("Mongo Error:", err);
+    process.exit(1); // fail fast on startup so platform restarts
+  });
+
+mongoose.connection.on('connected', () => console.log('Mongoose event: connected'));
+mongoose.connection.on('error', (err) => console.error('Mongoose event: error', err));
+mongoose.connection.on('disconnected', () => console.warn('Mongoose event: disconnected'));
 /* ---------------- SCHEMA ---------------- */
 const ContactSchema = new mongoose.Schema({
   name: { type: String, required: true },
