@@ -42,15 +42,6 @@ export default function Header() {
           >
             Contact Me
           </a>
-
-          <a
-            href="https://drive.google.com/file/d/1DqXJhwrUihaPQREIlt97H3GvpKHQP9C6/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-2 rounded-full border border-white/30 text-white"
-          >
-            View Resume
-          </a>
         </div>
 
         {/* Social Icons — Email → LinkedIn → GitHub → LeetCode */}
