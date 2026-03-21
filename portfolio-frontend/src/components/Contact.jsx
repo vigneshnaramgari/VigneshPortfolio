@@ -21,16 +21,22 @@ export default function Contact() {
         }),
       });
 
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        setResult(`Server error: ${res.status} ${errorData.message || res.statusText}`);
+        return;
+      }
+
       const data = await res.json();
 
       if (data.success) {
         setResult("Message Sent✅");
         event.target.reset();
       } else {
-        setResult("Failed to send ❌");
+        setResult(`Failed to send ❌ (${data.message || 'unknown'})`);
       }
     } catch (error) {
-      setResult("Server error ❌");
+      setResult(`Server error ❌ ${error.message || 'network error'}`);
     }
   };
 

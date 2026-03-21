@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",                 // Local frontend
-    "https://your-vercel-app.vercel.app"     // 🔁 REPLACE with your real Vercel URL
+    "https://vigneshnaramgariportfolio.vercel.app"     // Deployed frontend on Vercel
   ],
   methods: ["GET", "POST"],
 }));
@@ -45,6 +45,11 @@ app.post("/api/contact", async (req, res) => {
 
     if (!name || !email || !message) {
       return res.status(400).json({ success: false, message: "All fields required" });
+    }
+
+    if (mongoose.connection.readyState !== 1) {
+      console.error('MongoDB not connected — readyState:', mongoose.connection.readyState);
+      return res.status(503).json({ success: false, message: "Database not connected" });
     }
 
     const newMessage = new Contact({ name, email, message });
