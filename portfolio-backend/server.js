@@ -18,9 +18,8 @@ app.use(express.json());
 
 /* ---------------- MONGODB CONNECTION ---------------- */
 const mongoOptions = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
   serverSelectionTimeoutMS: 10000,
+  connectTimeoutMS: 10000,
 };
 
 mongoose.connect(process.env.MONGO_URI, mongoOptions)
