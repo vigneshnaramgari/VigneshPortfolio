@@ -8,7 +8,7 @@ export default function Header() {
       id="top"
       className="w-full min-h-screen px-6 md:px-[8%] pt-24 pb-20 flex items-center justify-center text-center"
     >
-      <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-6">
+      <div className="w-full max-w-5xl mx-auto px-4 flex flex-col items-center gap-6">
 
         {/* Profile Image */}
         <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
@@ -22,24 +22,25 @@ export default function Header() {
         <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo">
           Hi! I'm Vignesh
         </h3>
-<h1 className="text-2xl sm:text-5xl lg:text-5xl font-ovo leading-tight">
-  Full-Stack MERN Developer
-</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo leading-tight">
+          Full-Stack MERN Developer
+          <br />
+          AI/ML Enthusiast
+          <br />
+          AWS Cloud Practitioner
+        </h1>
 
-<p className="mt-3 text-base sm:text-lg lg:text-xl text-gray-300 font-ovo">
-  AWS Certified Cloud Practitioner | Exploring AI/ML
-</p>
-        <p className="max-w-2xl font-Ovo text-gray-300 text-sm sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm sm:text-base md:text-lg text-gray-300 font-Ovo">
           Full-stack developer skilled in designing and deploying scalable MERN stack
           applications, secure RESTful APIs, and AWS cloud solutions. Strong
           foundation in Data Structures, Algorithms, certifications, and hackathons.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <a
             href="#contact"
-            className="px-8 py-2 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white"
+            className="w-full sm:w-auto px-8 py-2 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-center"
           >
             Contact Me
           </a>

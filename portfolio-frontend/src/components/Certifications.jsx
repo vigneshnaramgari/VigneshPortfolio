@@ -6,7 +6,7 @@ export default function Certifications() {
           Certifications & Hackathons
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
             <h3 className="text-2xl font-semibold text-white mb-4">Certifications</h3>
             <ul className="space-y-3 text-gray-300">
