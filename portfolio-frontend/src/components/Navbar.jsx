@@ -11,6 +11,7 @@ export default function Navbar() {
     { name: "About", id: "about" },
     { name: "Skills", id: "skills" },
     { name: "Projects", id: "projects" },
+    { name: "Certifications", id: "certifications" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -58,39 +59,38 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className="fixed w-full px-6 lg:px-12 xl:px-[8%] py-5 flex items-center justify-between z-50 transition-all duration-300"
-    >
-      {/* LEFT LOGO */}
-      <a href="#top">
-        <div className="px-4 py-2 rounded-xl border border-gray-300 dark:border-white/30 bg-white/70 dark:bg-transparent shadow-sm font-mono text-lg text-indigo-500">
-          &lt; Vignesh /&gt;
-        </div>
-      </a>
+    <nav ref={navRef} className="fixed w-full z-50 transition-all duration-300">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 xl:px-[8%] py-5 flex items-center justify-between">
+        {/* LEFT LOGO */}
+        <a href="#top">
+          <div className="px-4 py-2 rounded-xl border border-gray-300 dark:border-white/30 bg-white/70 dark:bg-transparent shadow-sm font-mono text-lg text-indigo-500">
+            &lt; Vignesh /&gt;
+          </div>
+        </a>
 
-      {/* DESKTOP MENU */}
-      <ul className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 rounded-full px-10 py-3 bg-white/70 backdrop-blur-md shadow-sm font-Ovo dark:bg-white/5 border border-white/10">
-        {links.map((link) => (
-          <li key={link.id}>
-            <a
-              href={`#${link.id}`}
-              className={`transition ${
-                active === link.id
-                  ? "text-indigo-500 font-semibold"
-                  : "hover:text-indigo-500"
-              }`}
-            >
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+        {/* DESKTOP MENU */}
+        <ul className="hidden md:flex items-center gap-8 rounded-full px-10 py-3 bg-white/70 backdrop-blur-md shadow-sm font-Ovo dark:bg-white/5 border border-white/10">
+          {links.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                className={`transition ${
+                  active === link.id
+                    ? "text-indigo-500 font-semibold"
+                    : "hover:text-indigo-500"
+                }`}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      {/* MOBILE BUTTON */}
-      <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
-        {open ? <X size={28} /> : <Menu size={28} />}
-      </button>
+        {/* MOBILE BUTTON */}
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
       {/* MOBILE MENU */}
       <div

@@ -61,7 +61,8 @@ export default function Contact() {
 
           <div className="space-y-2 text-white/80">
             <p className="text-lg font-semibold">Vignesh Naramgari</p>
-            <p>MERN Stack Developer • AI/ML Enthusiast</p>
+            <p>Tirupati, Andhra Pradesh</p>
+            <p>+91-9398442995</p>
             <a href="mailto:nsaivignesh2005@gmail.com" className="hover:text-white transition">
               nsaivignesh2005@gmail.com
             </a>

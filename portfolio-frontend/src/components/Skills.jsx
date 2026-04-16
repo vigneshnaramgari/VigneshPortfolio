@@ -2,7 +2,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="w-full px-6 md:px-[8%] py-8 scroll-mt-24"
+      className="w-full px-6 md:px-[8%] py-12 scroll-mt-24"
     >
       <h2 className="text-4xl md:text-5xl font-Ovo text-center mb-10">
         Skills
@@ -13,28 +13,27 @@ export default function Skills() {
         {[
           {
             title: "Languages",
-            items: ["C / C++", "Python", "JavaScript"],
-          },
-          {
-            title: "CS Fundamentals",
-            items: ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks"],
-          },
-          {
-            title: "AWS Cloud",
-            items: ["EC2", "S3", "RDS", "IAM", "Cloudwatch"],
-          },
-          {
-            title: "Web Technologies",
-            items: ["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "JWT Auth"],
+            items: ["C / C++", "Python", "Java", "JavaScript"],
           },
           {
             title: "Frameworks",
             items: ["React.js", "Node.js", "Express.js"],
           },
-
+          {
+            title: "Web Tech",
+            items: ["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "REST APIs", "JWT Auth"],
+          },
+          {
+            title: "Cloud & DevOps",
+            items: ["EC2", "S3", "RDS", "IAM", "CloudWatch"],
+          },
           {
             title: "Databases",
             items: ["MongoDB", "SQL Server"],
+          },
+          {
+            title: "CS Fundamentals",
+            items: ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks"],
           },
 
 

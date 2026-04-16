@@ -5,8 +5,8 @@ import shopneticImg from "../assets/Shopnetic.png"; // add this image to assets
 export default function Projects () {
   const projects = [
     {
-      title: "BloodLink - Blood Bank System",
-      desc: "Solves the problem of blood shortage by connecting donors, patients, and admins in one system, making blood requests, donor matching, and inventory tracking faster and more organized.",
+      title: "BloodLink - Blood Bank Management System",
+      desc: "Blood donation centers often face challenges in tracking donors, blood inventory, and requests efficiently. This system streamlines resource management with donor matching, request handling, and admin controls.",
       tech: ["MongoDB", "Express.js", "Node.js", "JWT", "bcrypt", "HTML", "CSS"],
       github: "https://github.com/vigneshnaramgari/BloodLink---BloodBankManagementSystem",
       live: "https://blood-link-wxmm.onrender.com",
@@ -14,8 +14,8 @@ export default function Projects () {
       glow: "hover:shadow-red-500/30",
     },
     {
-      title: "Loan Default Prediction ML",
-      desc: "Helps financial institutions reduce loan risk by predicting whether a borrower may default using machine learning models trained on real applicant data.",
+      title: "Loan Default Prediction System",
+      desc: "Financial institutions often struggle to identify high-risk loan applicants accurately. This solution uses machine learning models to predict defaults and support safer lending decisions.",
       tech: ["Python", "Random Forest", "Logistic Regression" ,"XGBoost", "Pandas", "Scikit-learn", "Streamlit"],
       github: "https://github.com/vigneshnaramgari/LoanDefaultPredictionSystem",
       live: "https://loandefaultpredictionsystem.streamlit.app/",
@@ -34,7 +34,7 @@ export default function Projects () {
   ];
 
   return (
-    <section id="projects" className="w-full px-6 md:px-[8%] py-4">
+    <section id="projects" className="w-full px-6 md:px-[8%] py-12 scroll-mt-24">
       <h2 className="text-4xl md:text-5xl font-Ovo text-center mb-16 text-white">
         Projects
       </h2>

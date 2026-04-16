@@ -1,5 +1,6 @@
 import Contact from './components/Contact'
 import Projects from './components/Projects'
+import Certifications from './components/Certifications'
 import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
@@ -15,6 +16,7 @@ export default function App() {
             <About />
             <Skills />
             <Projects />
+            <Certifications />
             <Contact />
         </>
     )

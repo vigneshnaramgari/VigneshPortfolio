@@ -15,23 +15,24 @@ export default function Header() {
           <img
             src="/Vignesh_Profile.png"
             alt="Vignesh"
-            className="w-full h-full object-cover scale-125 object-top"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
         <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo">
           Hi! I'm Vignesh
-          <img src="./assets/hand-icon.png" alt="" className="w-5" />
         </h3>
+<h1 className="text-2xl sm:text-5xl lg:text-5xl font-ovo leading-tight">
+  Full-Stack MERN Developer
+</h1>
 
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-Ovo leading-tight">
-          MERN Stack Developer & <br /> AI/ML Enthusiast
-        </h1>
-
+<p className="mt-3 text-base sm:text-lg lg:text-xl text-gray-300 font-ovo">
+  AWS Certified Cloud Practitioner | Exploring AI/ML
+</p>
         <p className="max-w-2xl font-Ovo text-gray-300 text-sm sm:text-base">
-          Computer Science undergraduate specializing in AI & Machine Learning
-          with strong foundations in DSA. I build scalable full-stack apps and
-          intelligent ML solutions.
+          Full-stack developer skilled in designing and deploying scalable MERN stack
+          applications, secure RESTful APIs, and AWS cloud solutions. Strong
+          foundation in Data Structures, Algorithms, certifications, and hackathons.
         </p>
 
         {/* Buttons */}
