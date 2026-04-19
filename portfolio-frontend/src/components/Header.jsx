@@ -20,10 +20,10 @@ export default function Header() {
         </div>
 
         <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo text-gray-300">
-          Hi! I'm Vignesh
+          Hi! I'm Vignesh...
         </h3>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-Ovo leading-tight">
           <span className="bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent font-bold">
             MERN Stack Developer
           </span>
