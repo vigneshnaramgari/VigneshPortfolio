@@ -24,18 +24,17 @@ export default function Header() {
         </h3>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo leading-tight">
-          Full-Stack{" "}
           <span className="bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent font-bold">
-            MERN Stack
+            MERN Stack Developer
           </span>
           <br />
 
-          <span className="text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
+          <span className="text-gray-300 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-light tracking-wide">
             AI/ML Enthusiast
           </span>
           <br />
 
-          <span className="text-gray-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
+          <span className="text-gray-400 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-light tracking-wide">
             AWS Cloud Practitioner
           </span>
         </h1>
