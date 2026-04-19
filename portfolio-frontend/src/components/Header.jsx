@@ -11,23 +11,33 @@ export default function Header() {
       <div className="w-full max-w-5xl mx-auto px-4 flex flex-col items-center gap-6">
 
         {/* Profile Image */}
-        <div className="scale-125 w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
+        <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
           <img
             src="/Vignesh_Profile.png"
             alt="Vignesh"
-            className="w-full h-full object-cover object-top"
+            className="scale-125 w-full h-full object-cover object-top"
           />
         </div>
 
-        <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo">
+        <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo text-gray-300">
           Hi! I'm Vignesh
         </h3>
+
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo leading-tight">
-          Full-Stack MERN Developer
+          Full-Stack{" "}
+          <span className="bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent font-bold">
+            MERN Stack
+          </span>
           <br />
-          AI/ML Enthusiast
+
+          <span className="text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
+            AI/ML Enthusiast
+          </span>
           <br />
-          AWS Cloud Practitioner
+
+          <span className="text-gray-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
+            AWS Cloud Practitioner
+          </span>
         </h1>
 
         <p className="mt-3 max-w-2xl text-sm sm:text-base md:text-lg text-gray-300 font-Ovo">
@@ -40,13 +50,13 @@ export default function Header() {
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto px-8 py-2 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-center"
+            className="w-full sm:w-auto px-8 py-2 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-center hover:scale-105 transition-all duration-300"
           >
             Contact Me
           </a>
         </div>
 
-        {/* Social Icons — Email → LinkedIn → GitHub → LeetCode */}
+        {/* Social Icons */}
         <div className="flex gap-6">
 
           {/* Email */}
@@ -104,7 +114,6 @@ export default function Header() {
           </a>
 
         </div>
-
       </div>
     </section>
   );
