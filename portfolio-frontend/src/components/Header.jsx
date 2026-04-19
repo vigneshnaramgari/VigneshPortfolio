@@ -20,7 +20,7 @@ export default function Header() {
         </div>
 
         <h3 className="flex items-center gap-2 text-lg md:text-xl font-Ovo text-gray-300">
-          Hi! I'm Vignesh...
+          Hi! I'm Vignesh
         </h3>
 
         <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-Ovo leading-tight">
