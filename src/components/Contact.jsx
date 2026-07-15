@@ -6,38 +6,20 @@ import { MdEmail } from "react-icons/md";
 export default function Contact() {
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    setResult("Sending...");
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
 
-    try {
-      const res = await fetch("https://vigneshportfolio-ihus.onrender.com/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: event.target.name.value,
-          email: event.target.email.value,
-          message: event.target.message.value,
-        }),
-      });
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
-      if (!res.ok) {
-        const errorData = await res.json().catch(() => ({}));
-        setResult(`Server error: ${res.status} ${errorData.message || res.statusText}`);
-        return;
-      }
+    window.location.href = `mailto:nsaivignesh2005@gmail.com?subject=${subject}&body=${body}`;
 
-      const data = await res.json();
-
-      if (data.success) {
-        setResult("Message Sent✅");
-        event.target.reset();
-      } else {
-        setResult(`Failed to send ❌ (${data.message || 'unknown'})`);
-      }
-    } catch (error) {
-      setResult(`Server error ❌ ${error.message || 'network error'}`);
-    }
+    setResult("Opening your email app...");
+    form.reset();
   };
 
   return (

@@ -13,7 +13,7 @@ export default function Skills() {
         {[
           {
             title: "Languages",
-            items: ["C++", "Python", "Java", "JavaScript"],
+            items: ["C / C++", "Python", "Java", "JavaScript"],
           },
           {
             title: "Frameworks",
@@ -21,7 +21,7 @@ export default function Skills() {
           },
           {
             title: "Web Tech",
-            items: ["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "REST APIs"],
+            items: ["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "REST APIs", "JWT Auth"],
           },
           {
             title: "Cloud & DevOps",
@@ -29,7 +29,7 @@ export default function Skills() {
           },
           {
             title: "Databases",
-            items: ["MongoDB", "MySQL"],
+            items: ["MongoDB", "SQL Server"],
           },
           {
             title: "CS Fundamentals",

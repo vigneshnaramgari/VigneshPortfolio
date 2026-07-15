@@ -28,7 +28,7 @@ export default function About() {
                     <h3 className="text-xl font-semibold text-white mb-2">Education</h3>
 
                     <p className="text-white font-medium">
-                        B.Tech in Computer Science and Engineering (AI & ML) <br /> <span className="text-white font-medium">CGPA - 7.71</span>
+                        B.Tech in Computer Science and Engineering (AI & ML) <br /> <span className="text-white font-medium">CGPA - 7.85</span>
                     </p>
 
                     <p className="text-gray-400 text-sm">
